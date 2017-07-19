@@ -1,0 +1,44 @@
+<!doctype html>
+<html ⚡>
+<head>
+  <meta charset="utf-8">
+  <link rel="canonical" href="self.html" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <script async custom-element="amp-algolia" src="https://cdn.ampproject.org/v0/amp-algolia-0.1.js"></script> 
+   <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script> 
+   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript> 
+   <script async src="https://cdn.ampproject.org/v0.js"></script> 
+  <style amp-custom>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+    }
+    h1 {
+      margin: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Algolia AMP</h1>
+  <form action-xhr="https://ofcncog2cu-dsn.algolia.net/1/indexes/npm-search/" method="get" target="_top" id="form">
+    <input type="reset" value="reset">
+    <input name="query" placeholder="Search something" required type="search" on="input-debounced:form.submit">
+    <input type="submit" value="search">
+
+     <input type="hidden" name="x-algolia-agent"  value="Algolia for vanilla AMP 0.0.0"> 
+     <input type="hidden" name="x-algolia-application-id"  value="OFCNCOG2CU"> 
+     <input type="hidden" name="x-algolia-api-key"  value="f54e21fa3a2a0160595bb058179bfb1e"> 
+     <input type="hidden" name="attributesToRetrieve"  value='["name"]'> 
+
+    <div submit-success>
+      <template type="amp-mustache">
+        {{results[Ø].nbHits}} success
+      </template>
+    </div>
+    <div submit-error>
+      <template type="amp-mustache">
+        {{results[Ø].nbHits}} error
+      </template>
+    </div>
+  </form>
+</body>
+</html>
